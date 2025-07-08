@@ -69,7 +69,7 @@ export default function Home() {
   };
   return (
     <div className="bg-[#FFD4D4] min-h-screen flex items-center flex-col justify-start">
-      <div className="pt-32 font-jura font-bold text-4xl xs:text-2xl xs:text-center">
+      <div className="pt-32 font-jura font-bold text-4xl xs:text-3xl xs:text-center">
         RECOMMENDATIONS BY COONFITUUREE
       </div>
 
