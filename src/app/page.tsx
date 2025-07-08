@@ -30,14 +30,14 @@ export default function Home() {
             </a>
 
             <br />
-            <div className="mt-4 text-2xl" >(If u don't have Apple Music just get out of this section)</div>
+            <div className="mt-4 text-2xl" >(If u don’t have Apple Music just get out of this section)</div>
           </div>
         );
       case "courses":
         return (
           <div className="text-2xl mt-10 text-center">
             <div className="mb-4">
-              Online Courses that I've learned (or learning):
+              Online Courses that I’ve learned (or learning):
             </div>
 
             <a
