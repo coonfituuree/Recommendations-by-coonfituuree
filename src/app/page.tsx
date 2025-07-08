@@ -12,14 +12,16 @@ export default function Home() {
       case "books":
         return (
           <div className="text-2xl mt-10">
-            📚 Книги, которые мы рекомендуем: <br />– Atomic Habits
-            <br />– Deep Work
-            <br />– The Power of Now
+            <div>📚 The books I recommend:</div>
+            <br />
+            <a href="">1. Atomic Heart</a> <br />
+            <a href="">2. The 48 Laws of Power</a> <br />
+            <a href="">3. The 48 Laws of Power</a>
           </div>
         );
       case "playlist":
         return (
-          <div className="text-4xl mt-10">
+          <div className="text-4xl mt-10 xs:text-3xl">
             <a
               href="https://music.apple.com/kz/playlist/car/pl.u-EdAVkG3sD42YDLW"
               target="_blank"
@@ -30,14 +32,16 @@ export default function Home() {
             </a>
 
             <br />
-            <div className="mt-4 text-2xl" >(If u don’t have Apple Music just get out of this section)</div>
+            <div className="mt-4 xs:mt-3 text-2xl xs:text-xl">
+              (If u don’t have Apple Music just get out of this section)
+            </div>
           </div>
         );
       case "courses":
         return (
-          <div className="text-2xl mt-10 text-center">
-            <div className="mb-4">
-              Online Courses that I’ve learned (or learning):
+          <div className="text-2xl font-bold mt-10 text-center">
+            <div className="mb-4 xs:text-2xl">
+              Online Courses that I’ve learned (or been learning):
             </div>
 
             <a
@@ -50,12 +54,12 @@ export default function Home() {
             </a>
             <br />
             <a
-              href="https://youtu.be/M9O5AjEFzKw?si=4rrrT87_L2zXJfiU"
+              href="https://youtu.be/QIDkK0FbXDc?si=O3a_rFnTM_tC65BM"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-transform transform hover:scale-105 inline-block text-blue-700"
+              className="xs:mt-2 transition-transform transform hover:scale-105 inline-block text-blue-700"
             >
-              1. Next JS Course by Huxn WebDev
+              2. Next JS Course by Huxn WebDev
             </a>
           </div>
         );
@@ -65,12 +69,12 @@ export default function Home() {
   };
   return (
     <div className="bg-[#FFD4D4] min-h-screen flex items-center flex-col justify-start">
-      <div className="pt-30 font-jura font-bold text-4xl">
+      <div className="pt-32 font-jura font-bold text-4xl xs:text-2xl xs:text-center">
         RECOMMENDATIONS BY COONFITUUREE
       </div>
 
       {!selected && (
-        <div className="flex gap-5 mt-16">
+        <div className="flex gap-5 mt-16 xs:flex xs:flex-col">
           <button
             onClick={() => setSelected("books")}
             className="text-white bg-[#460049] px-10 py-3 rounded-full hover:bg-[#710077] transition-colors"
