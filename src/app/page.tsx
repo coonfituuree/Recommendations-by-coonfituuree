@@ -11,7 +11,7 @@ export default function Home() {
     switch (selected) {
       case "books":
         return (
-          <div className="text-2xl mt-10">
+          <div className="text-2xl mt-10 font-bold">
             <div>📚 The books I recommend:</div>
             <br />
             <a href="">1. Atomic Heart</a> <br />
@@ -21,7 +21,7 @@ export default function Home() {
         );
       case "playlist":
         return (
-          <div className="text-4xl mt-10 xs:text-3xl">
+          <div className="text-4xl mt-10 font-bold xs:text-3xl">
             <a
               href="https://music.apple.com/kz/playlist/car/pl.u-EdAVkG3sD42YDLW"
               target="_blank"
