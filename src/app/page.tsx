@@ -12,11 +12,12 @@ export default function Home() {
       case "books":
         return (
           <div className="text-2xl mt-10 font-bold">
-            <div>📚 The books I recommend:</div>
-            <br />
-            <a href="">1. Atomic Heart</a> <br />
-            <a href="">2. The 48 Laws of Power</a> <br />
-            <a href="">3. The 48 Laws of Power</a>
+            <div className="2xl:text-4xl">📚 The books I recommend:</div>
+            <div className="2xl:mt-7 xs:mt-3 text-blue-900">
+              <a className="2xl:text-3xl" href="">1. Atomic Heart</a> <br />
+              <a className="2xl:text-3xl" href="">2. The 48 Laws of Power</a> <br />
+              <a className="2xl:text-3xl" href="">3. Martian </a>
+            </div>
           </div>
         );
       case "playlist":
@@ -26,21 +27,21 @@ export default function Home() {
               href="https://music.apple.com/kz/playlist/car/pl.u-EdAVkG3sD42YDLW"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-transform transform hover:scale-105 inline-block"
+              className="transition-transform transform hover:scale-105 inline-block text-blue-900"
             >
               🎧 Apple Music
             </a>
 
             <br />
             <div className="mt-4 xs:mt-3 text-2xl xs:text-xl">
-              (If u don’t have Apple Music just get out of this section)
+              (If u don’t have Apple Music then get out of this section)
             </div>
           </div>
         );
       case "courses":
         return (
-          <div className="text-2xl font-bold mt-10 text-center">
-            <div className="mb-4 xs:text-2xl">
+          <div className="2xl:mt-10 text-xl font-bold xs:mt-5 text-center">
+            <div className="2xl:text-3xl mb-4 xs:text-2xl">
               Online Courses that I’ve learned (or been learning):
             </div>
 
@@ -48,7 +49,7 @@ export default function Home() {
               href="https://youtu.be/M9O5AjEFzKw?si=4rrrT87_L2zXJfiU"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-transform transform hover:scale-105 inline-block text-blue-700"
+              className="2xl:text-2xl transition-transform transform hover:scale-105 inline-block text-blue-900"
             >
               1. React Monster Course – 50 hours by Huxn WebDev
             </a>
@@ -57,7 +58,7 @@ export default function Home() {
               href="https://youtu.be/QIDkK0FbXDc?si=O3a_rFnTM_tC65BM"
               target="_blank"
               rel="noopener noreferrer"
-              className="xs:mt-2 transition-transform transform hover:scale-105 inline-block text-blue-700"
+              className="2xl:text-2xl xs:mt-2 transition-transform transform hover:scale-105 inline-block text-blue-900"
             >
               2. Next JS Course by Huxn WebDev
             </a>
