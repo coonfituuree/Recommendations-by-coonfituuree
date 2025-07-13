@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import CourseCard from "../components/CousreCard";
+import CourseCard from "../components/CourseCard";
 import { courseList } from "@/data/courses";
+import { musicList } from "@/data/musics";
+import MusicCard from "@/components/MusicCard";
 
 export default function Home() {
   const [selected, setSelected] = useState<
@@ -41,19 +43,13 @@ export default function Home() {
         );
       case "playlist":
         return (
-          <div className="text-4xl mt-10 font-bold xs:text-3xl">
-            <a
-              href="https://music.apple.com/kz/playlist/car/pl.u-EdAVkG3sD42YDLW"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-transform transform hover:scale-105 inline-block text-blue-900"
-            >
-              🎧 Apple Music
-            </a>
-
-            <br />
-            <div className="mt-4 xs:mt-3 text-2xl xs:text-xl">
-              (If u don’t have Apple Music then get out of this section)
+          <div className="text-white 2xl:text-3xl font-bold">
+            {" "}
+            My Playlists (clickable)
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center justify-items-center mt-8">
+              {musicList.map((music, idx) => (
+                <MusicCard key={idx} {...music} />
+              ))}
             </div>
           </div>
         );
@@ -100,12 +96,6 @@ export default function Home() {
           >
             🖥️ Online Courses
           </button>
-          <button
-            onClick={() => setSelected("courses")}
-            className="text-white bg-[#222222] px-10 py-3 rounded-full hover:bg-[#710077] transition-colors"
-          >
-            some shi
-          </button>
         </div>
       )}
 
@@ -114,7 +104,7 @@ export default function Home() {
           {renderContent()}
           <button
             onClick={() => setSelected(null)}
-            className="mt-8 mb-5 text-white bg-[#710077] px-8 py-2 rounded-full hover:bg-[#910599] transition-colors"
+            className="mt-8 2xl:mb-10 xs:mb-20  text-white bg-[#222222] px-13 py-2 rounded-full hover:bg-[#29222a] transition-colors"
           >
             ⬅ Back
           </button>

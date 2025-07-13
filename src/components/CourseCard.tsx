@@ -1,4 +1,3 @@
-// components/CourseCard.tsx
 import Image from "next/image";
 
 interface CourseCardProps {
